@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>样式操作</title>
+	<style type="text/css">
+	.high{
+	 font-weight:bold;   /* 粗体字 */
+	 color : red;        /* 字体颜色设置红色*/
+	}
+	.another{
+	 font-style:italic;
+	 color:blue;
+	}
+	</style>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			$("button:eq(0)").click(function() {
+				console.log($("p").attr('class'))
+			});
+			$("button:eq(1)").click(function() {
+				$("p").attr("class","high");
+			});
+			$("button:eq(2)").click(function() {
+				$("p").addClass('another');
+			});
+			$("button:eq(3)").click(function() {
+				$("p").removeClass();
+			});
+			$("button:eq(4)").click(function() {
+				$("p").removeClass('high');
+			});
+			$("button:eq(5)").click(function() {
+				$("p").toggleClass('high');
+			});
+			$("button:eq(6)").click(function() {
+				// console.log($("p").hasClass('high'));
+				console.log($("p").is('.high'));
+			});
+		})
+	</script>
+</head>
+<body>
+	<div>
+		<button>输出class类</button>
+		<button>设置class类</button>
+		<button>追加class类</button>
+		<button>删除全部class类</button>
+		<button>删除指定class类</button>
+		<button>重复切换class类</button>
+		<button>判断元素是否含有某个class类</button>
+	</div>
+	<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+	<ul>
+	  <li title='苹果'>苹果</li>
+	  <li title='橘子'>橘子</li>
+	  <li title='菠萝'>菠萝</li>
+	</ul>
+</body>
+</html>

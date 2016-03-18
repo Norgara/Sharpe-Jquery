@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>包裹节点</title>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			// $("p").wrap('<b></b>');
+			// $("p").wrapAll("<b></b>");
+			$("p").wrapInner("<b></b>");
+		})
+	</script>
+</head>
+<body>
+	<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+	<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+	<ul>
+	  <li title='苹果'>苹果</li>
+	  <li title='橘子'>橘子</li>
+	  <li title='菠萝'>菠萝</li>
+	</ul>
+	<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+</body>
+</html>
