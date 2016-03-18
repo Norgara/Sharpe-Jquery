@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>插入节点</title>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			// append()
+			$("p:lt(1)").append("<b>你好</b>");
+			// appendTo()
+			$("<b>我不好</b>").appendTo("p:nth-child(2)");
+			// prepend()
+			$("p:nth-child(3)").prepend("<b>Why serious</b>");
+			// prependTo()
+			$("<b>Just do it</b>").prependTo("p:nth-child(4)");
+			// insertAfter()
+			$("<b>换行了</b>").insertAfter("p:nth-child(5)");
+			// after()
+			$("p:nth-child(7)").after("<b>换行了ddd</b>");
+			// before();
+			$("p:nth-child(9)").before('<b>换行d</b>');
+			// insertBefore()
+			$('<b>最后一个</b>').insertBefore("p:last-child");
+		})
+	</script>
+</head>
+<body>
+	<p>1.我想说：</p>
+	<p>2.我想说：</p>
+	<p>3.我想说：</p>
+	<p>4.我想说：</p>
+	<p>5.我想说：</p>
+	<p class="what">6.想说：</p>
+	<p>7.我想说：</p>
+	<p>8.我想说：</p>
+</body>
+</html>

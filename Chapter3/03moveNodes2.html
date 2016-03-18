@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动节点</title>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			var li_1=$("<li title='香蕉'>香蕉</li>");
+			var li_2=$("<li title='雪梨'>雪梨</li>");
+			var li_3=$("<li title='其他'>其他</li>");
+			var parent=$("ul");
+			var tow_li=$("ul li:eq(1)");
+			parent.append(li_1);
+			parent.prepend(li_2);
+			li_3.insertBefore(tow_li);
+		})
+	</script>
+</head>
+<body>
+	<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+	<ul>
+	  <li title='苹果'>苹果</li>
+	  <li title='橘子'>橘子</li>
+	  <li title='菠萝'>菠萝</li>
+	</ul>
+</body>
+</html>
