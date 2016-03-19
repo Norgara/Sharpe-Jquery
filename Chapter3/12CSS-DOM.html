@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS-DOM</title>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			$("p").css({"fontSize": '30px',"backgroundColor": '#888888'});
+			var offset=$("p").offset();
+			console.log(offset.left);
+			console.log(offset.top);
+			$("p").offset({top:50,left:80});
+			$("p").width("400px");
+			console.log($("p").position());
+			console.log($("p").scrollTop());
+			console.log($("p").scrollLeft());
+			$("ul li:eq(0)").scrollTop(300)
+		})
+	</script>
+</head>
+<body>
+	<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+	<ul>
+	  <li title='苹果'>苹果</li>
+	  <li title='橘子'>橘子</li>
+	  <li title='菠萝'>菠萝</li>
+	</ul>
+</body>
+</html>
