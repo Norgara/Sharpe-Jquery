@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM操作实例</title>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<style>
+		#tooltip{position:absolute;padding:2px;display:none;color:#fff;border:1px solid #ccc;background:#333;}
+	</style>
+	<script>
+		$(function() {
+			var x=10,y=20;
+			$("a.tooltip").mouseover(function(e) {
+				// this.myTitle = this.title;
+				sTitle=$(this).attr("title");
+				this.title="";
+				var oDiv=$("<div id='tooltip'>"+sTitle+"<\/div>");
+				$("body").append(oDiv);
+				$("#tooltip").css({
+						"top": e.pageY+y+'px',
+						"left": e.pageX+x+'px'
+					}).show("fast");
+			}).mouseout(function() {
+				$("#tooltip").remove();
+				this.title=sTitle;
+			}).mousemove(function(e) {
+				$("#tooltip").css({
+					"top": e.pageY+y+'px',
+					"left": e.pageX+x+'px'
+				});
+			});;
+		})
+	</script>
+</head>
+<body>
+	<p><a href="#" class="tooltip" title="这是我的超链接提示1.">提示1.</a></p>
+	<p><a href="#" class="tooltip" title="这是我的超链接提示2.">提示2.</a></p>
+	<p><a href="#" title="这是自带提示1.">自带提示1.</a></p>
+	<p><a href="#" title="这是自带提示2.">自带提示2.</a></p>
+</body>
+</html>
