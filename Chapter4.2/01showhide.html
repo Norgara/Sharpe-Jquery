@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery动画</title>
+	<style>
+	.aUl{display:inline-block;}
+	</style>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			/*$('p').hover(function() {
+				$(this).next("ul").hide(1000);
+			},function() {
+				$(this).next('ul').show(1000);
+			})*/
+
+			/*$('p').hover(function() {
+				$(this).next('ul').fadeOut();
+			},function() {
+				$(this).next('ul').fadeIn();
+			})*/
+			
+			$('p').hover(function() {
+				$(this).next('ul').slideUp();
+			},function() {
+				$(this).next('ul').slideDown();
+			})
+		})
+	</script>
+</head>
+<body>
+	<p title="选择你最喜欢的水果." >你最喜欢的水果是?</p>
+	<ul class="aUl">
+	  <li title='苹果'>苹果</li>
+	  <li title='橘子'>橘子</li>
+	  <li title='菠萝'>菠萝</li>
+	</ul>
+</body>
+</html>
