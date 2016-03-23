@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>其他动画方法</title>
+	<style>
+		/* #panel{position: relative;
+		width: 100px;
+		height: 100px;
+		border: 1px solid #0050D0;
+		background: #96E555;
+		cursor: pointer;
+		opacity: 0.5;
+			} */
+
+		/*$("#panel h5.head").toggle(function() {
+			$(this).next("div.content").hide();
+		},function() {
+			$(this).next("div.content").show();
+		})*/
+	</style>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			/*$("#panel h5.head").click(function() {
+				$(this).next("div.content").toggle();
+			});*/
+
+			/*$("#panel h5.head").click(function() {
+				$(this).next("div.content").slideToggle();
+			});*/
+
+			$("#panel h5.head")	.click(function() {
+				$(this).next("div.content").fadeTo(1000,0.2)
+			});
+
+
+		})
+	</script>
+</head>
+<body>
+	<div id="panel">
+		<h5 class="head">什么是jQuery?</h5>
+		<div class="content">
+			jQuery是继Prototype之后又一个优秀的JavaScript库，它是一个由 John Resig 创建于2006年1月的开源项目。jQuery凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档、操作DOM、处理事件、执行动画和开发Ajax。它独特而又优雅的代码风格改变了JavaScript程序员的设计思路和编写程序的方式。
+		</div>
+	</div>
+</body>
+</html>
