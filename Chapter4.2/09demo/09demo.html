@@ -5,6 +5,15 @@
 	<title>动画实例</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<script src="../../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			$('span.next').click(function() {
+				var oParent=$(this).parents("div.v_show");
+				var v_show=oParent.find("div.v_content_list");
+				var v_content=oParent.find("div.v_content");
+			})	
+		})
+	</script>
 </head>
 <body>
 	<div class="v_show">
