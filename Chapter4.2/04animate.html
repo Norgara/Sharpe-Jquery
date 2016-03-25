@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义动画</title>
+	<style>
+		#panel{position: relative;
+		width: 100px;
+		height: 100px;
+		border: 1px solid #0050D0;
+		background: #96E555;
+		cursor: pointer;
+		opacity: 0.5;
+	}
+	</style>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			/*$('#panel').click(function() {
+				$(this).animate({left:'500px'},3000);
+			})*/
+
+			/*$('#panel').click(function() {
+				$(this).animate({left:'+=500px'},3000);
+			})*/
+
+			/*$('#panel').click(function() {
+				$(this).animate({left:'500px',height:'200px'},3000)
+			});*/
+
+			/*$('#panel').click(function(event) {
+					$(this).animate({left:'500px'},3000)
+							.animate({height:'200px'},3000);
+			});*/
+
+			/*$('#panel').click(function() {
+				$(this).animate({left:'400px',height:'200px',oapcity:'1'},3000)
+						.animate({top:'400px',width:'200px'},3000)
+						.fadeOut('slow');
+			});*/
+			
+			$('#panel').click(function() {
+				$(this).animate({left:'400px',height:'200px',oapcity:'1'},3000)
+						.animate({top:'400px',width:'200px'},3000,function() {
+							$(this).css("border","5px solid blue")
+						})
+			});
+		})
+	</script>
+</head>
+<body>
+	<div id="panel"></div>
+</body>
+</html>

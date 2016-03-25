@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>结束动画</title>
+	<style>
+		#panel{position: relative;
+		width: 100px;
+		height: 100px;
+		border: 1px solid #0050D0;
+		background: #96E555;
+		cursor: pointer;
+		opacity: 0.5;
+	}
+	</style>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			/*$('#panel').hover(function() {
+				$(this).stop()
+						.animate({height:'150',width:"300"},200);
+			},function() {
+				$(this).stop()
+						.animate({height:'22',width:'60'},300);
+			})*/
+
+			$('#panel').hover(function() {
+				$(this).stop(true,true)
+						.animate({height:'150'},200)
+						.animate({width:'300'},200)
+			},function() {
+				$(this).stop(true,true)
+						.animate({height:'22'},300)
+						.animate({width:'60'},300)
+			})
+		})
+	</script>
+</head>
+<body>
+	<div id="panel"></div>
+</body>
+</html>

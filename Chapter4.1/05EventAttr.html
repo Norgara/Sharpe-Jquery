@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件对象属性</title>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			/*$('a').click(function(event) {
+				console.log(event.type);
+				alert(event.type);
+				return false;
+			});*/
+			/*$('a').click(function(event) {
+				console.log(event.target.parentNode);	// target类似与this,可以获取nodeName，children等节点
+				// alert(event.target.href);
+				return false;
+			});	*/
+			/*$('a').click(function(event) {
+				console.log(event.pageX+','+event.pageY);
+				event.preventDefault();
+			});*/
+			$('a').click(function(event) {
+				console.log(event.which);
+				// event.preventDefault();
+				return false;
+			});
+			$('input').keyup(function(e) {
+				console.log(e.which);
+				// console.log(e.metaKey);
+			});
+		})		
+	</script>
+</head>
+<body>
+	<a href="www.zhihu.com">超链接</a>
+	<input type="text">
+</body>
+</html>

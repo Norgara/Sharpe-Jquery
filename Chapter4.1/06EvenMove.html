@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移除事件</title>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			/*$('#btn').bind('click', function() {
+				$("#test").append("<p>我的绑定函数1</p>")
+			}).bind('click', function() {
+				$("#test").append("<p>我的绑定函数2</p>")
+			}).bind('click', function() {
+				$('#test').append("<p>我的绑定函数3</p>")
+			});
+
+			$("#delAll").click(function() {
+				// $('#btn').unbind("click");
+				$('#btn').unbind();
+			});*/
+			/*$('#btn').bind('click',myFun1 = function() {
+				$("#test").append("<p>我的绑定函数1</p>")
+			}).bind('click',myFun2 = function() {
+				$("#test").append("<p>我的绑定函数2</p>")
+			}).bind('click',myFun3 = function() {
+				$('#test').append("<p>我的绑定函数3</p>")
+			});
+			$("#delAll").click(function() {
+				$('#btn').unbind('click', myFun2);
+			});*/
+			$('#btn').one('click', function() {
+				$("#test").append('<p>我的绑定函数1</p>');
+			}).one('click',function() {
+				$('#test').append('<p>我的绑定函数2</p>');
+			}).one('click', function() {
+				$('#test').append('<p>我的绑定函数3</p>')
+			});
+		})
+	</script>
+</head>
+<body>
+	<div>
+		<button id="delAll">删除所有事件</button>
+	</div>
+	<button id="btn">单机我</button>
+	<div id="test"></div>
+</body>
+</html>

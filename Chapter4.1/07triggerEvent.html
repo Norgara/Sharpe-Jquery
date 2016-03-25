@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟操作</title>
+	<script src="../all_need/jquery-2.2.2.min.js"></script>
+	<script>
+		$(function() {
+			/*$('#btn').bind('click', function() {
+				$('#test').append('<p>我的绑定函数1</p>');
+			}).bind('click', function() {
+				$('#test').append('<p>我的绑定函数2</p>');
+			}).bind('click', function() {
+				$('#test').append('<p>我的绑定函数3</p>');
+			});
+
+			// $('#btn').trigger('click');
+			$('#btn').click();*/
+
+			/*$('#btn').bind('myClick', function() {
+				$('#test').append('<p>我的绑定函数1</p>')
+			});
+			$('#btn').trigger('myClick');*/
+
+			/*$('#btn').bind('myClick',function(event,mes1,mes2) {
+				$('#test').html('<p>'+mes1+mes2+'<p>');
+			})
+			$('#btn').trigger('myClick',['我的自定义','事件']);*/
+
+			$('#ta').bind('click', function(event) {
+				console.log(event.target.href);
+			});
+			$('#ta').triggerHandler('click');
+		})
+	</script>
+</head>
+<body>
+	<div>
+		<button id="delAll">删除所有事件</button>
+	</div>
+	<button id="btn">单机我</button>
+	<div id="test"></div>
+	<a href="#" id="ta">取消默认操作</a>
+</body>
+</html>
